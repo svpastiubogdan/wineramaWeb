@@ -12,4 +12,4 @@ RUN pip install -r requirements.txt
 
 COPY ./entrypoint.sh /app
 
-ENTRYPOINT ["/app/entrypoint.sh"]
+CMD ["python", "manage.py runserver 0.0.0.0:80"]
