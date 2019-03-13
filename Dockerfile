@@ -1,5 +1,9 @@
 FROM python:3
 
+ENV PORT=80
+
+EXPOSE $PORT
+
 COPY ./winerama /app
 
 WORKDIR /app
