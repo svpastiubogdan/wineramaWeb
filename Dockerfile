@@ -2,7 +2,7 @@ FROM python:3
 
 ENV PORT=80
 
-EXPOSE $PORT
+EXPOSE 80
 
 COPY ./winerama /app
 
