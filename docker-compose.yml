@@ -6,6 +6,6 @@ services:
     restart: always
     build: .
     volumes:
-      - ./winerama:/app
+      - ./winerama-recommender-tutorial:/app
     ports:
       - "80:80"
