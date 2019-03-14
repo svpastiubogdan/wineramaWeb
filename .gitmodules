@@ -1,6 +1,0 @@
-
-[submodule "winerama-recommender-tutorial"]
-	path = winerama-recommender-tutorial
-	url = https://github.com/jadianes/winerama-recommender-tutorial.git
-[submodule "Submod"]
-	url = https://github.com/svpastiubogdan/wineramaWeb.git
