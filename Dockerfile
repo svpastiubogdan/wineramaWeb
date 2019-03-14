@@ -4,7 +4,7 @@ ENV PORT=80
 
 EXPOSE 80
 
-COPY ./winerama-recommender-tutorial/winerama/ /app
+COPY ./winerama-recommender-tutorial/winerama /app
 
 WORKDIR /app
 COPY ./requirements.txt /app
