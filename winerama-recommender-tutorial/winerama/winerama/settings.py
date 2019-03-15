@@ -37,13 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap3',
     'reviews',
-    'registration',
 )
-
-ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
-REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -58,12 +53,10 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'winerama.urls'
 
-LOGIN_REDIRECT_URL = '/reviews/review/user'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,8 +77,12 @@ WSGI_APPLICATION = 'winerama.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': os.environ['DB_HOST_NAME'],
+        'PORT': 5432,
     }
 }
 
