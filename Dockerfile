@@ -1,4 +1,5 @@
 FROM python:3
+ENV $PORT
 
 COPY ./winerama-recommender-tutorial/winerama /app
 
