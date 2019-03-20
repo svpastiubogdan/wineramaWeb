@@ -21,6 +21,6 @@ phases:
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI
       - echo Writing image definitions file
-      - $REPOSITORY_URI > imagedefinitions.json
+      - echo $REPOSITORY_URI > imagedefinitions.json
 artifacts:
-  files: imagedefinitions.json       
+  files: imagedefinitions.json
