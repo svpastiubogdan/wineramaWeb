@@ -20,3 +20,7 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI
+      - echo Writing image definitions file
+      - $REPOSITORY_URI > imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json       
